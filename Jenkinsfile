@@ -1,10 +1,10 @@
 pipeline {
 
   environment {
-    PROJECT = "focus-tree-329108"
+    PROJECT = "psychic-cascade-339206"
     APP_NAME = "gceme"
     FE_SVC_NAME = "${APP_NAME}-frontend"
-    CLUSTER = "project-one"
+    CLUSTER = "sample-application"
     CLUSTER_ZONE = "us-central1-c"
     IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
     JENKINS_CRED = "${PROJECT}"
