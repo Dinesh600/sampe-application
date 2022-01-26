@@ -1,0 +1,22 @@
+kind: apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gceme
+spec:
+  selector:
+    matchLabels:
+      app: gceme
+  template:
+    metadata:
+      labels:
+        app: gceme
+    spec:
+      containers:
+      - name: gceme
+        image: gcr.io/my-project-600-339318/gceme
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
