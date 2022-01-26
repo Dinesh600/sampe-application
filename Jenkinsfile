@@ -63,7 +63,9 @@ spec:
       // Canary branch
       when { branch 'canary' }
       steps {
-        container('kubectl') 
+        container('kubectl') {
+          sh "kubectl apply -f deployment.yaml"
+        }
       }
     }
   }
