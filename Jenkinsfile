@@ -59,9 +59,8 @@ spec:
         }
       }
     }
-    stage('Deploy Canary') {
-      // Canary branch
-      when { branch 'canary' }
+    stage('Deploy Dev') {
+      
       steps {
         container('kubectl') {
           sh "kubectl apply -f deployment.yaml"
